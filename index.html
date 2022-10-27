@@ -1,157 +1,116 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gabriel's personal portfolio">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Gabriel Padin, Padin, Gabriel, GSP, GSP WEB DEV, DEV, portfolio, personal portfolio, frontend, desarrollo web, developer">
-    <meta name="author" content="Gabriel Padin">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="images/gsp.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>GSP Web Dev</title>
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="gsp.ico">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Presentacion</title>
 </head>
 <body>
-    <div id="fade" class="intro pe-none ">
-        <div id="btn-go" class="text-center pe-click">
-            <button id="btn-start" class="btn btn-info ex lightblue">START</button>
-        </div>
-        <div id="l-screen" class="d-none">
-            <div class="preloader text-center text-light">
-                <div id="spiner" class="p-5 spinner-border text-info " role="status"></div>
-                <div class="preloader_inner" id="btnf">100%</div>
-            </div>
-            <div id="loading" class="mt-3 mx-auto text-center text_shadow">Loading<div id="dots" ></div></div>
-            
-        </div>
-    </div>
-    <canvas id="canvas" class="pe-none">Canvas is not supported in your browser.</canvas>
-    <canvas id="canvas2" class="pe-none">Canvas is not supported in your browser.</canvas>
-    <div class="h_100 position-fixed lines pe-none main d-none"></div>
-    <div class="h_100 bg text-info d-flex flex-column pe-none main d-none">
-        <div class="mt-5 text-center z-500">
-            <div class="t-container">
-                <h1 id="t" title="GABRIEL PADIN" class="text_shadow">GABRIEL PADIN</h1>
-            </div>
-            <small class="text_shadow">Frontend Developer</small>
-            <div class="d-flex mt-2 z-300 pe-click">
-                <i onclick="location.href='https://www.linkedin.com/in/gabriel-sebasti%C3%A1n-padin-86859b221/';" id="f-l" class="text_shadow bi bi-align-start ms-auto icons cursor-p"></i>
-                <i onclick="location.href='https://github.com/gabrielspadin22';" id="f-g" class="text_shadow bi bi-align-middle mx-5 z-300 icons cursor-p"></i>
-                <i onclick="location.href='https://www.instagram.com/g.s.p.webdev/';" id="f-i" class="text_shadow bi bi-align-end me-auto z-300 icons cursor-p"></i>
-            </div>
-        </div>
-        <div class="mt-auto mb-3 text-center z-500 d-flex">
-            <div id="rotatei" class="ms-auto my-auto ">
-                <i class="bi bi-caret-left-fill " ></i>
-            </div>
-            <button class="btn btn-info mx-3 pe-click" id="contact" >Contactame</button>
-            <div id="rotatel" class="me-auto my-auto" >
-                <i class="bi bi-caret-right-fill"></i>
-            </div>
-        </div>
-        <div class="d-flex my-3">
-            <i class="bi bi-caret-right ms-auto"></i>
-            <div id="box" class="">
-                <i  class="bi bi-bounding-box-circles mx-5"></i>
-            </div>
-            
-            <i class="bi bi-caret-left me-auto"></i>
-        </div>
-    </div>
-    <div class="text-light text-center d-flex flex-column z-200 luz pe-none main d-none">
-        <div class="mt-25vh"></div>
-        <div class="fs p-3 mx-5 bg-primary bg-opacity-10 border rounded border-primary bloom">
-            <p id="p1"></p>
-            <p id="p2"></p>
-            <p id="p3"></p>
-        </div>
-        <div class="sep m-0 p-0 d-flex">
-            <div class="sep_  b_shadow-"></div>
-            <div class="sep_1 b_shadow"></div>
-        </div>
-        <div class="sep m-0 p-0 d-flex">
-            <div class="sep_ b_shadow-"></div>
-            <div class="sep_1 b_shadow"></div>
-        </div>
-        <div class="text-center text-light text_shadow ">stack</div>
-        <div class="sep m-0 p-0 d-flex ">
-            <div class="sep_2 "></div>
-            <div class="sep_3 "></div>
-        </div>
-        <div class="card-group ">
-            <div class="card card2 bg-transparent border-0 z-1">
-                <img loading="lazy" id="red" src="images/html.png" class="card-img-top rounded-circle sm_img m-auto bg-danger red op img_respon pe-click" alt="...">
-            </div>
-            <div class="card card2 bg-transparent border-0 z-1">
-                <img loading="lazy" src="images/css3.png" class="card-img-top rounded-circle sm_img m-auto bg-primary blue op img_respon pe-click" alt="...">
-            </div>
-            <div class="card card2 bg-transparent border-0 z-1">				  	
-                <img loading="lazy" src="images/js.png" class="card-img-top rounded-circle sm_img m-auto bg-warning yellow op img_respon pe-click" alt="...">
-            </div>
-            <div class="card card2 bg-transparent border-0 z-1">
-                <img loading="lazy" src="images/c.png" class="card-img-top rounded-circle sm_img m-auto bg-b purple op img_respon pe-click" alt="...">
-            </div>
-            <div class="card card2 bg-transparent border-0 z-1">
-                <img loading="lazy" src="images/sql.png" class="card-img-top rounded-circle sm_img m-auto white op img_respon pe-click" alt="">
-            </div>
-            <div class="card card2 bg-transparent border-0 z-1">
-                <img loading="lazy" src="images/react.png" class="card-img-top rounded-circle sm_img m-auto bg-dark2 lightblue op img_respon pe-click" alt="...">
-            </div>
-            <div class="card card2 bg-transparent border-0 z-1">
-                <img loading="lazy" src="images/node.png" class="card-img-top rounded-circle sm_img m-auto bg-success green op img_respon pe-click" alt="...">	
-            </div>
-        </div>
-        <div class="sep mt-2 m-0 p-0 d-flex hide ">
-            <div class="w"></div>
-            <div class="sep_4 mx-auto border-start border-danger curve r_shadow"></div>
-            <div class="sep_4 mx-auto border-start border-primary curve b_shadow"></div>
-            <div class="sep_4 mx-auto border-start border-warning curve y_shadow"></div>
-            <div class="mx-auto border-b p_shadow"></div>
-            <div class="sep_4 mx-auto border-start curve rotate z-1 w_shadow"></div>
-            <div class="sep_4 mx-auto border-start border-info curve rotate z-1 lb_shadow"></div>
-            <div class="sep_4 mx-auto border-start border-success curve rotate z-1 g_shadow"></div>
-            <div class="w"></div>
-        </div>
-        <div class="rainbow rainbow_text_animated mt-5 fs-4 ">Proyectos</div>
-        <div class="container-fluid text-light text-center ">
-            <div class="container p-5 my-5 border-top">
-                <p class="my-5 fs">He aqui un par de mis proyectos personales en donde aplico mis habilidades.</p>
-                <div class="card-group bg-transparent ">
-                    <div class="card bg-transparent z-1 ">
-                        <a href="https://saphiraproducciones.000webhostapp.com/"><img src="images/logo.jpg" class="rgbcard-img-top img-thumbnail opacity-75 op pe-click" alt="..."></a>										
-                    </div>
-                    <div class="card bg-transparent z-1">
-                        <a href="Tecnicoto/index.html"><img src="images/tecnicoto.png" class="card-img-top img-thumbnail opacity-75 op pe-click" alt="..."></a>										
-                    </div>
-                    <div class="card bg-transparent z-1">
-                        <a href="https://kratiavote.com/"><img src="https://kratiavote.com/images/kratia.png" class="card-img-top img-thumbnail opacity-75 op pe-click" alt="..."></a>										
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sep"></div>
-    </div>
-    <div id="form_container" class="pe-none fadeout text-center z-900 bg-transparent d-none">
-        <form class="py-4" action="https://formsubmit.co/gabrielspadin22@gmail.com" method="POST">
-            <label class=" text-center text-light">Ingresa tu correo</label>
-            <input class="d-flex m-auto w-95 "type="email" name="email" required placeholder="correo@gmail.com">
-            <label class="text-center text-light">Escribí tu mensaje</label>
-            <textarea class="d-flex m-auto text-dark w-95" type="text" name="name" required placeholder="Escribi tu mensaje..."></textarea>
-            <div class="text-center m-2">
-                <button type="submit" class="btn btn-dark">Enviar</button>
-                <button type="button" class="btn btn-dark" id="cerrar">Cerrar</button>
-            </div>
-            <input type="hidden" name="_next" value="http://gabrielspadindev.com.ar/">
-        </form>
-    </div>
-    <audio id="song" src="audio/song.mp3" preload="auto" class="d-none">
-    
-    <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<div class="nav">
+  <a href="#info">Sobre mi</a>
+  <a href="#exp">Experiencia</a>
+  <a href="#menu">Proyectos</a>
+  <a href="#skills">Tecnologías</a>
+  <a href="#footer1">Contacto</a>
+</div>
+
+
+
+<section id="data">
+<h1 class="parpadea" id="name">Gabriel</h1>
+
+<h2 class="parpadea2" id="lname">Padin</h2>
+</section>
+
+
+<div id="info">Hola! Me llamo Gabriel y tengo 22 años. Soy técnico electrónico y me encuentro estudiando desarrollo web. Mi interes en la programación comenzó cuando tuve mi primera netbook a los 13 años. Fue ahí cuando me empecé a interesar mas en el mundo de la computacion, investigar sobre el funcionamiento del equipo y que cosas podia hacer con el, influenciado por juegos "Sandbox" y programas de diseño 3D como por ejemplo Google SketchUp, sumado a que mi especialidad como tecnico electronico empezaba a desarrollarse en el secundario. Actualmente me encuentro trabajando para COTO como soporte tecnico en el sector de alarmas. Mis principales hobbies son los video juegos, el diseño 3D, produccion de música y por supuesto, practicar programacion.
+</div>
+
+
+<div id="exp">Experiencia laboral
+	<div id="jobs">
+		<details>
+			<summary>Coto C.I.S.C.A</summary>
+			<p>Administrativo de laboratorio</p>
+			<p>Soporte técnico de alarmas, pantallas y balanzas</p>
+
+		</details>
+		
+		<details>
+			<summary>Electrónica Giardino</summary>
+			<p>Atencion al cliente</p>
+			<p>Instalacion de equipos de seguridad domiciliarios</p>
+		</details>
+
+		<details>
+			<summary>Hipermercado Mariano Max</summary>
+			<p>Cajero y repositor</p>
+		</details>
+
+		<details>
+			<summary>Remises San Martin</summary>
+			<p>Operador de radio</p>
+		</details>
+
+		<details>
+			<summary >RAPPI</summary>
+			<p>Reparto de mercaderia</p>
+			<p>Coordinador de pedidos</p>
+		</details>
+	</div>
+
+</div>
+
+
+
+
+
+<p id="pro">Proyectos</p>
+
+<div  id="menu">
+
+	<div class="img3d" >
+		<img  src="3d.png" alt="Proyectos 3d">
+		<a href="3d.html">
+		<img class="imgtop3d" src="render.png" alt="preview">
+		</a>
+	</div>
+
+	<div class="imgau" >
+		<img id="audio" class="ir" src="audio.png" alt="Proyectos multimedia">
+		<a href="">
+		<img class="imgtopau" src="fl.png" alt="preview">
+		</a>
+	</div>
+
+	<div class="imgco" >
+		<img id="code" class="ir" src="code.png" alt="Proyectos de codigo">
+		<img class="imgtopcod" src="div.png" alt="preview">
+	</div>
+
+</div>
+
+<section id="skills">
+	<p id="mskills">Habilidades</p>
+
+	<div class="center">
+		<p  id="tecs">HTML - CSS - JS - C# - PS - SKB - VR - FL - UE4</P>
+	</div>
+</section>
+
+<footer id="footer1">
+	<div id="caja">
+	<div class="box" id="cel">CEL</div>
+	<div class="box" id="date">2021</div>
+	<div class="box" id="mail">GMAIL</div>
+</footer>
+<div id="aviso">ACTUALMENTE TRABAJANDO EN EL RESPONSIVE DE LA PAGINA PARA COMPATIBILIDAD CON DISPOSITIVOS MOVILES</div>
+	</div>
 </body>
 </html>
+
