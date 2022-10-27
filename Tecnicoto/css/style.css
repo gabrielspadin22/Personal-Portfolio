@@ -1,0 +1,29 @@
+.min-width{
+    min-width: 329px;
+}
+.bg-c{
+    background-color: rgb(173, 180, 185);
+}
+.txt{
+    font-size: .8rem;
+}
+.copy{
+    border: none;
+}
+.container-sucu{
+    background-color: rgb(204, 204, 204);
+    box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.34);
+-webkit-box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.34);
+-moz-box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.34);
+}
+.display , .display2{
+    display: none !important;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+#map {
+    height: 100%;
+}
