@@ -86,35 +86,11 @@ document.getElementById('contact').addEventListener('mouseleave', ()=>{
   document.getElementById('rotatel').classList.toggle('rotatel');
 });
 
-//-------------------
-document.getElementById('f-l').addEventListener('mouseover', ()=>{
-  document.getElementById('f-l').classList.toggle('bi-align-start' && 'bi-linkedin')
-});
-
-document.getElementById('f-l').addEventListener('mouseleave', ()=>{
-  document.getElementById('f-l').classList.toggle('bi-align-start' && 'bi-linkedin')
-});
 
 //-------------------
-document.getElementById('f-g').addEventListener('mouseover', ()=>{
-  document.getElementById('f-g').classList.toggle('bi-align-middle' && 'bi-github')
-});
-document.getElementById('f-g').addEventListener('mouseleave', ()=>{
-  document.getElementById('f-g').classList.toggle('bi-align-middle' && 'bi-github')
-});
-
-//-------------------
-
-document.getElementById('f-i').addEventListener('mouseover', ()=>{
-  document.getElementById('f-i').classList.toggle('bi-align-end' && 'bi-instagram')
-});
-document.getElementById('f-i').addEventListener('mouseleave', ()=>{
-  document.getElementById('f-i').classList.toggle('bi-align-end' && 'bi-instagram')
-});
-
 let it = 0;
 let itdots = 0;
-let txt1 = '¡Hola! Mi nombre es Gabriel, tengo 23 años y soy desarrollador frontend. Mi stack principal es ReactJS y .Net. Mis hobbies son los videojuegos, la creación de música, el modelaje 3D y obviamente, la programación.' ;
+let txt1 = '¡Hola, me llamo Gabriel y soy personal técnico orientado al rubro IT! Me especializo en informática, en seguridad electrónica y programación.' ;
 
 function typeWriter() {
   if (it < txt1.length) {
@@ -123,49 +99,6 @@ function typeWriter() {
     setTimeout(typeWriter, 20);
   }
 }
-let sample = document.getElementById("song");
-
-document.getElementById('btn-go').addEventListener('click', ()=>{
-  document.getElementById('btn-go').remove();
-  document.getElementById('fade').classList.add('luz');
-  document.getElementById('l-screen').classList.remove('d-none');
-  sample.play();
-  loader();
-  dotsf();
-})
-
-function dotsf() {
-  if (itdots < 12) {
-    document.getElementById("dots").innerHTML += ". ";
-    itdots++;
-    setTimeout(dotsf, 600);
-  }
-}
-
-function loader() {
-  let inner = document.querySelector('.preloader_inner');
-  let w = 0,
-  t = setInterval(function() {
-    w = w + 1;
-    inner.textContent = w+'%';
-    if (w === 100){
-      w = 0;
-      clearInterval(t);
-      setTimeout(() => {
-        let main = document.getElementsByClassName('main');
-        for(let i=0; i< main.length; i++){
-        main[i].classList.remove('d-none');
-      }
-        document.getElementById('fade').classList.add('fadeout');
-        document.getElementById('spiner').remove();
-      }, 1300);
-      setTimeout(() => {
-        document.getElementById('fade').remove();
-      }, 2500);
-      typeWriter()
-    }
-  },65
-)};
 
 document.getElementById('contact').addEventListener('click', ()=>{
   document.getElementById('form_container').classList.remove('d-none');
@@ -196,3 +129,5 @@ document.getElementById('cerrar').addEventListener('click',()=>{
     document.getElementById('form_container').classList.add('d-none');
   }, 1000);
 });
+
+typeWriter();
